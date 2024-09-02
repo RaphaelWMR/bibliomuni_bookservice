@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express';
+import routesBook from '../routes/book';
 class Server {
     private app: express.Application;
     private port: string;
@@ -19,7 +20,7 @@ class Server {
                 msg: `API Working`
             })
         });
-        //this.app.use('/api/books');
+        this.app.use('/api/books', routesBook);
     }
 }
 

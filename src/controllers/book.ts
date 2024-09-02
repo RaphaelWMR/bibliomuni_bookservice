@@ -1,7 +1,31 @@
-import {Request, Response} from 'express';
+import { Request, Response } from 'express';
 
-export const getBooks = (req:Request, res: Response) => {
+export const getBooks = (req: Request, res: Response) => {
     res.json({
         msg: `get Books`
+    });
+}
+
+export const getBook = (req: Request, res: Response) => {
+    const { id } = req.params;
+    res.json({
+        msg: `get Book`,
+        id
+    });
+}
+
+export const deleteBook = (req: Request, res: Response) => {
+    const { id } = req.params;
+    res.json({
+        msg: `delete Book`,
+        id
+    });
+}
+
+export const postBook = (req: Request, res: Response) => {
+    const { body } = req;
+    res.json({
+        msg: `post Book`,
+        body
     });
 }
