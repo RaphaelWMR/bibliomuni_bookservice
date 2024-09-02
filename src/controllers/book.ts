@@ -29,3 +29,13 @@ export const postBook = (req: Request, res: Response) => {
         body
     });
 }
+
+export const updateBook = (req: Request, res: Response) => {
+    const { body } = req;
+    const {id} = req.params;
+    res.json({
+        msg: `update Book`,
+        id,
+        body
+    });
+}

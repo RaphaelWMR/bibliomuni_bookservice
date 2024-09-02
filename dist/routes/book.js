@@ -7,4 +7,5 @@ router.get('/', book_1.getBooks);
 router.get('/:id', book_1.getBook);
 router.delete('/:id', book_1.deleteBook);
 router.post('/', book_1.postBook);
+router.put('/:id', book_1.updateBook);
 exports.default = router;

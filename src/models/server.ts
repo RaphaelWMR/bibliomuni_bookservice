@@ -7,6 +7,7 @@ class Server {
         this.app = express();
         this.port = process.env.PORT || '3001';
         this.listen();
+        this.middlewares();
         this.routes();
     }
     listen() {
@@ -21,6 +22,9 @@ class Server {
             })
         });
         this.app.use('/api/books', routesBook);
+    }
+    middlewares() {
+        this.app.use(express.json());
     }
 }
 
