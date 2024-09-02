@@ -1,3 +1,4 @@
-const nombre: string = 'BiblioMuni'
+import Server from "./models/server";
 
-console.log(nombre)
+
+const server = new Server(); 
